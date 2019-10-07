@@ -2,7 +2,6 @@ sudo: required
 services:
   - docker
 
-
 before_install:
    - docker build -t jesufrancis31/docker-react -f Dockerfile.dev .
 
@@ -17,7 +16,7 @@ deploy:
    bucket_name: "elasticbeanstalk-ap-south-1-334342053018"
    bucket_path: "docker-react-EBS"
    on:
-    branch: master
+     branch: master
    access_key_id: $AWS_ACCESS_KEY
    secret_access_key:
         secure: "$AWS_SECRET_KEY"
